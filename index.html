@@ -1,32 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-	<title>WebRTC: Still photo capture demo</title>
-	<meta charset='utf-8'>
-	<link rel="stylesheet" href="main.css" type="text/css" media="all">
-	<script src="capture.js">
-	</script>
-</head>
-<body>
-<div class="contentarea">
-	<h1>
-		MDN - WebRTC: Still photo capture demo
-	</h1>
-	<p>
-		This example demonstrates how to set up a media stream using your built-in webcam, fetch an image from that stream, and create a PNG using that image.
-	</p>
-  <div class="camera">
-    <video id="video">Video stream not available.</video>
-    <button id="startbutton">Take photo</button> 
-  </div>
-  <canvas id="canvas">
-  </canvas>
-  <div class="output">
-    <img id="photo" alt="The screen capture will appear in this box."> 
-  </div>
-	<p>
-		Visit our article <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos"> Taking still photos with WebRTC</a> to learn more about the technologies used here.
-	</p>
-</div>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Camera API</title>
+        <link rel="stylesheet" href="css/base.css" type="text/css" media="screen">
+    </head>
+
+    <body>
+
+        <div class="container">
+            <h1>Camera API</h1>
+
+            <section class="main-content">
+                <p>A demo of the Camera API, currently implemented in Firefox and Google Chrome on Android. Choose to take a picture with your device's camera and a preview will be shown through createObjectURL or a FileReader object (choosing local files supported too).</p>
+                
+                <p>
+                    <input type="file" id="take-picture" accept="image/*">
+                </p>
+
+                <h2>Preview:</h2>
+                <p>
+                    <img src="about:blank" alt="" id="show-picture">
+                </p>
+
+                <p id="error"></p>
+
+            </section>
+
+        </div>
+
+
+        <script src="js/base.js"></script>
+
+
+    </body>
 </html>
